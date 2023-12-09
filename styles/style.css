@@ -65,6 +65,10 @@ ol {
   outline-offset: 1px;
 }
 
+.button:active {
+  background-color: #545050;
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -172,8 +176,8 @@ ol {
   border: 1px solid #fff;
 }
 
-input[type=checkbox]:checked + .search-form__pseudo-checkbox::before {
-  content: '';
+input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
+  content: "";
   display: inline-block;
   margin: 0 0 1px 1px;
   width: 15px;
@@ -210,10 +214,15 @@ input[type=checkbox]:checked + .search-form__pseudo-checkbox::before {
 .content__list {
   height: 298px;
   overflow: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
   position: relative;
+}
+
+.content__list::-webkit-scrollbar {
+  display: none;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .content__card-link {
@@ -227,7 +236,16 @@ input[type=checkbox]:checked + .search-form__pseudo-checkbox::before {
   outline: none;
 }
 
+.content__card-link:focus-visible {
+  border: 1px solid #fff;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
 .content__video-card {
+  padding: 2px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 194px;
