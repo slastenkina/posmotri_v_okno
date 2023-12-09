@@ -124,7 +124,6 @@ ol {
   width: fit-content;
   align-items: center;
   gap: 5px;
-  position: relative;
 }
 
 .search-form__fieldset-title {
@@ -175,12 +174,11 @@ ol {
 
 input[type=checkbox]:checked + .search-form__pseudo-checkbox::before {
   content: '';
+  display: inline-block;
+  margin: 0 0 1px 1px;
   width: 15px;
   height: 15px;
   background: #fff;
-  position: absolute;
-  left: 2px;
-  top: 3.5px;
 }
 
 .search-form__submit-button {
